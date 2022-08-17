@@ -149,9 +149,22 @@ header {
 	font-size: 18px;	/*文字サイズ*/
 	margin-bottom: 20px;
 	padding: 5px 20px;	/*上下、左右への余白*/
+	border: 3px solid #3d910a;	/*線の幅、線種、色*/
 	background: #3d910a;	/*背景色*/
 	border-radius: 30px;	/*角丸のサイズ*/
 	color: #fff;			/*文字色*/
+	position: relative;
+}
+/*メインコンテンツのh4タグの設定*/
+#main h4 {
+	clear: both;
+	font-size: 18px;	/*文字サイズ*/
+	margin-bottom: 20px;
+	padding: 5px 20px;	/*上下、左右への余白*/
+	background: #cfdccd;	/*背景色*/
+	border: 2px solid #3d910a;	/*線の幅、線種、色*/
+	border-radius: 30px;	/*角丸のサイズ*/
+	color: #3d910a;			/*文字色*/
 	position: relative;
 }
 /*装飾用画像の土台設定*/
@@ -161,18 +174,11 @@ header {
 	right: 0px;	/*h2,h3タグに対して右から0pxの場所に配置*/
 	top: -20px;	/*h2,h3タグに対して上から-20pxの場所に配置*/
 }
-/*装飾用画像（飛行機）*/
+/*装飾用画像（犬猫）*/
 #main h2.bg1::after, #main h3.bg1::after {
 	content: url(../images/bg1.png);
 }
-/*装飾用画像（木馬）*/
-#main h2.bg2::after, #main h3.bg2::after {
-	content: url(../images/bg2.png);
-}
-/*装飾用画像（列車）*/
-#main h2.bg3::after, #main h3.bg3::after {
-	content: url(../images/bg3.png);
-}
+
 /*装飾用画像が入った場合、テキストと画像が重ならないように右側に余白をとる設定*/
 #main h2.bg1, #main h3.bg1,
 #main h2.bg2, #main h3.bg2,
@@ -356,6 +362,13 @@ div.clear {
 #sub ul.submenu {
 	margin-bottom: 0;
 }
+
+#google-map {
+  height: 200px;
+	width: 600px;
+}
+
+
 
 /*フッター設定
 ---------------------------------------------------------------------------*/
@@ -594,19 +607,38 @@ header {
 	display: block;
 	position: absolute;
 	top: 38px;		/*上から32pxの場所に配置*/
-	right: 4%;		/*右から4%の場所に配置*/
-	width: 30px;	/*幅*/
-	border: 1px solid #000;	/*枠線の幅、線種、色*/
-	padding: 12px 10px 5px;	/*上、左右、下へのボックス内余白*/
-	background: #fff;		/*背景色*/
-}
+	right: 4%;		/* 右から4%の場所に配置 */
+	width: 45px;	/*幅 */
+  border: 3px solid #3d910a;	/* 枠線の幅、線種、色 */
+	border-radius: 5px;
+	/* padding: 12px 10px 5px;	上、左右、下へのボックス内余白 */
+	background: #fff;		/* 背景色 */
+	text-align: center;
+	cursor: pointer;
+} 
 /*３本のバー（1本あたり）*/
-#menubar_hdr span {
+/* #menubar_hdr span {
 	display: block;
 	border-top: 3px solid #000;	/*枠線の幅、線種、色*/
-	margin-bottom: 7px;			/*バー同士の余白*/
+	/* margin-bottom: 7px;			/*バー同士の余白*/
+/* } */ 
+
+#menubar_hdr span {
+	display: block;
+	font-size: 10px;
+	font-weight: 700;
+	white-space:nowrap ;
 }
 
+#menubar_hdr .menuber{
+	display: block;
+	width: 30px;
+	height: 30px;
+	font-size: 30px;
+	font-weight: 400;
+	margin:0 auto;
+
+}
 /*その他
 ---------------------------------------------------------------------------*/
 body.s-n #sub,body.s-n #footermenu,.m-n {display: none;}
